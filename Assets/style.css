@@ -1,0 +1,21 @@
+
+body {
+    margin-top: 50px;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 10px solid rgb(197, 197, 197);
+}
+#headerText {
+    float: bottom;
+    font-size: 50px;
+}
+#headerSubtext {
+    float: bottom;
+}
+#dateHolder {
+    margin-top: 20px;
+    float: bottom;
+}

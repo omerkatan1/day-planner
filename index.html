@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Day Planner</title>
+
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- linking css -->
+    <link rel="stylesheet" href="Assets/style.css">
+
+    <!-- linking jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+
+    <!-- header for the webpage -->
+    <header class="container-fluid">
+        <div class="row">
+            <div id="textHead" class="col-12">
+                <h1 id="headerText">Work Day Scheduler</h1>
+                <h4 id="headerSubtext">A simple app to plan your day.</h4>
+                <h5 id="dateHolder"></h5>
+                <h5 id="timeHolder"></h5>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- where page content will go -->
+    <div class="container-fluid"></div>
+
+
+
+
+
+    <!-- jQuery stuff -->
+    <script>
+
+        var getDate = new Date();
+        var getDateString = JSON.stringify(getDate);
+        var year = getDateString.slice(1, 5);
+        var month = getDateString.slice(6, 8);
+        var day = getDateString.slice(9, 11);
+
+        var newDate = day + " / " + month + " / " + year;
+
+        $("#dateHolder").append(newDate);
+    </script>
+</body>
+
+
+
+</html>
