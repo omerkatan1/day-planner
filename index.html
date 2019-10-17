@@ -183,6 +183,15 @@
     <!-- jQuery stuff -->
     <script>
 
+        $(document).ready(function() {
+            $("#headerSubtext").css("opacity", "0");
+            $("#dateHolder").css("opacity", "0");
+            $("#headerText").css("opacity", "0");
+            $("#headerText").animate({opacity: 1}, 800);
+            $("#headerSubtext").delay(500).animate({opacity: 1}, 800);
+            $("#dateHolder").delay(1000).animate({opacity: 1}, 800);
+        });
+
         var getDate = new Date();
         var getDateString = JSON.stringify(getDate);
         var year = getDateString.slice(1, 5);
