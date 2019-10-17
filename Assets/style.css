@@ -17,22 +17,26 @@ header {
     float: bottom;
     font-size: 50px;
     color: rgb(85, 85, 85);
+    font-family: 'Roboto', sans-serif;
 }
 
 #headerSubtext {
     float: bottom;
     color: rgb(163, 163, 163);
+    font-family: 'Indie Flower';
 }
 
 #dateHolder {
     margin-top: 20px;
     float: bottom;
     color: rgb(150, 150, 150);
+    cursor: default;
 }
 
 #timeHolder {
     color: rgb(150, 150, 150);
     float: left;
+    cursor: default;
 }
 
 #dateTimeBox {
@@ -51,7 +55,6 @@ textarea {
     resize: none;
     background-color: rgb(245, 245, 234);
     padding: 6px;
-    font-family: 'Indie Flower';
     font-size: 20px;
     border-radius: 10px 0px 0px 10px;
 }
@@ -64,6 +67,7 @@ textarea:focus {
     margin-top: 2px;
     margin-bottom: 2px;
 }
+
 
 .saveBtn {
     margin: 0;
@@ -115,4 +119,14 @@ textarea:focus {
 .col-8 {
     padding: 0;
     margin: 0;
+}
+
+footer {
+    height: 110px;
+    width: 100%;
+    background-color: whitesmoke;
+    margin-top: 75px;
+    -moz-box-shadow: 0 0 20px #6d6d6d;
+    -webkit-box-shadow: 0 0 20px #6d6d6d;
+    box-shadow: 0 0 20px #6d6d6d;
 }
