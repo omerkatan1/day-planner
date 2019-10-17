@@ -5,7 +5,8 @@
     <title>Day Planner</title>
 
     <!-- Bootstrap Link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- linking css -->
     <link rel="stylesheet" href="Assets/style.css">
@@ -40,9 +41,13 @@
     <!-- where page content will go -->
     <div class="container">
 
-        <div id="dateTimeBox">
-            <h5 id="dateHolder"></h5>
-            <h5 id="timeHolder"></h5>
+        <div id="dateTimeDiv" class="row">
+            <div class="col">
+                <div id="dateTimeBox">
+                    <h5 id="dateHolder"></h5>
+                    <h5 id="timeHolder"></h5>
+                </div>
+            </div>
         </div>
 
 
@@ -192,7 +197,7 @@
 
     <!-- javascript stuff -->
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             $("#headerSubtext").css("opacity", "0");
             $("#headerText").css("opacity", "0");
@@ -217,7 +222,7 @@
         }
 
         setTime();
-        setInterval(function() {
+        setInterval(function () {
             setTime();
         }, 1000)
 
