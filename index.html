@@ -31,9 +31,152 @@
 
 
     <!-- where page content will go -->
-    <div class="container-fluid"></div>
+    <div class="container">
+
+        <div class="row">
+
+            <!-- nine AM box -->
+            <div class="col-12 schBox">
+                <div class="row">
+                    <div class="col-2">
+                        <h5>9am</h5>
+                    </div>
+                    <div class="col-8">
+                        <input class="schTextBox" id="nineAm" type="text">
+                    </div>
+                    <div class="col-2">
+                        <button id="saveBtn1" onclick="saveNine()">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ten AM box -->
+            <div class="col-12 schBox">
+                <div class="row">
+                    <div class="col-2">
+                        <h5>10am</h5>
+                    </div>
+                    <div class="col-8">
+                        <input class="schTextBox" id="tenAm" type="text">
+                    </div>
+                    <div class="col-2">
+                        <button id="saveBtn2" onclick="saveTen()">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- eleven AM box -->
+            <div class="col-12 schBox">
+                <div class="row">
+                    <div class="col-2">
+                        <h5>11am</h5>
+                    </div>
+                    <div class="col-8">
+                        <input class="schTextBox" id="elevenAm" type="text">
+                    </div>
+                    <div class="col-2">
+                        <button id="saveBtn3" onclick="saveEleven()">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- twelve AM box -->
+            <div class="col-12 schBox">
+                <div class="row">
+                    <div class="col-2">
+                        <h5>12am</h5>
+                    </div>
+                    <div class="col-8">
+                        <input class="schTextBox" id="twelveAm" type="text">
+                    </div>
+                    <div class="col-2">
+                        <button id="saveBtn4" onclick="saveTwelve()">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- one PM box -->
+            <div class="col-12 schBox">
+                <div class="row">
+                    <div class="col-2">
+                        <h5>1pm</h5>
+                    </div>
+                    <div class="col-8">
+                        <input class="schTextBox" id="onePm" type="text">
+                    </div>
+                    <div class="col-2">
+                        <button id="saveBtn5" onclick="saveOne()">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- two PM box -->
+            <div class="col-12 schBox">
+                <div class="row">
+                    <div class="col-2">
+                        <h5>2pm</h5>
+                    </div>
+                    <div class="col-8">
+                        <input class="schTextBox" id="twoPm" type="text">
+                    </div>
+                    <div class="col-2">
+                        <button id="saveBtn6" onclick="saveTwo()">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- three PM box -->
+            <div class="col-12 schBox">
+                <div class="row">
+                    <div class="col-2">
+                        <h5>3pm</h5>
+                    </div>
+                    <div class="col-8">
+                        <input class="schTextBox" id="threePm" type="text">
+                    </div>
+                    <div class="col-2">
+                        <button id="saveBtn7" onclick="saveThree()">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- four PM box -->
+            <div class="col-12 schBox">
+                <div class="row">
+                    <div class="col-2">
+                        <h5>4pm</h5>
+                    </div>
+                    <div class="col-8">
+                        <input class="schTextBox" id="fourPm" type="text">
+                    </div>
+                    <div class="col-2">
+                        <button id="saveBtn8" onclick="saveFour()">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- five PM box -->
+            <div class="col-12 schBox">
+                <div class="row">
+                    <div class="col-2">
+                        <h5>5pm</h5>
+                    </div>
+                    <div class="col-8">
+                        <input class="schTextBox" id="fivePm" type="text">
+                    </div>
+                    <div class="col-2">
+                        <button id="saveBtn9" onclick="saveFive()">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <button id="clear">clear</button>
+
+        </div>
+    </div>
 
 
+    <footer></footer>
 
 
 
@@ -49,6 +192,68 @@
         var newDate = day + " / " + month + " / " + year;
 
         $("#dateHolder").append(newDate);
+
+        document.getElementById("nineAm").value = localStorage.getItem("nineAm");
+        document.getElementById("tenAm").value = localStorage.getItem("tenAm");
+        document.getElementById("elevenAm").value = localStorage.getItem("elevenAm");
+        document.getElementById("twelveAm").value = localStorage.getItem("twelveAm");
+        document.getElementById("onePm").value = localStorage.getItem("onePm");
+        document.getElementById("twoPm").value = localStorage.getItem("twoPm");
+        document.getElementById("threePm").value = localStorage.getItem("threePm");
+        document.getElementById("fourPm").value = localStorage.getItem("fourPm");
+        document.getElementById("fivePm").value = localStorage.getItem("fivePm");
+
+
+        function saveNine() {
+            var nineAm = document.getElementById("nineAm").value;
+            localStorage.setItem("nineAm", nineAm);
+        }
+
+        function saveTen() {
+            var tenAm = document.getElementById("tenAm").value;
+            localStorage.setItem("tenAm", tenAm);
+        }
+
+        function saveEleven() {
+            var elevenAm = document.getElementById("elevenAm").value;
+            localStorage.setItem("elevenAm", elevenAm);
+        }
+
+        function saveTwelve() {
+            var twelveAm = document.getElementById("twelveAm").value;
+            localStorage.setItem("twelveAm", twelveAm);
+        }
+
+        function saveOne() {
+            var onePm = document.getElementById("onePm").value;
+            localStorage.setItem("onePm", onePm);
+        }
+
+        function saveTwo() {
+            var twoPm = document.getElementById("twoPm").value;
+            localStorage.setItem("twoPm", twoPm);
+        }
+
+        function saveThree() {
+            var threePm = document.getElementById("threePm").value;
+            localStorage.setItem("threePm", threePm);
+        }
+
+        function saveFour() {
+            var fourPm = document.getElementById("fourPm").value;
+            localStorage.setItem("fourPm", fourPm);
+        }
+
+        function saveFive() {
+            var fivePm = document.getElementById("fivePm").value;
+            localStorage.setItem("fivePm", fivePm);
+        }
+
+        $("#clear").click(function() {
+            localStorage.clear();
+        });
+
+
     </script>
 </body>
 
