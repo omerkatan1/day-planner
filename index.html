@@ -91,26 +91,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         var dataTime = ["9am", "10am", "11am", "12am", "1pm", "2pm", "3pm", "4pm", "5pm"];
 
 
@@ -118,18 +98,15 @@
         function store(newBtn, newTextarea) {
             (newBtn).click(function () {
 
-                console.log($(this).attr("data-name"))
-                localStorage.setItem($(this).attr("data-name"), $(newTextarea).val());
-
+                // this is the data-name of the current button that is being clicked
                 var getData = $(this).attr("data-name");
+                // this is the text inside the text area
                 var setData = $(newTextarea).val();
 
-                console.log(localStorage.getItem(getData));
-
-                newTextarea.val(localStorage.getItem($(this).attr("data-name")));
+                // save textarea value to localStorge to button clicked
+                localStorage.setItem(getData, setData);
             });
         }
-
 
 
         for (var i = 0; i < dataTime.length; i++) {
@@ -152,19 +129,24 @@
             newRowSavebtn.addClass("col-2");
 
 
+            // all time labels stuff
+            var newLabel = $("<h4>");
+            newLabel.text(dataTime[i]);
+            newLabel.addClass("timeBoxText");
+            newRowTimelabel.append(newLabel);
 
 
             // all textarea stuff
             var newTextarea = $("<textarea>");
-            newTextarea.val(localStorage.getItem($(this).attr("data-name")));
             newRowTextarea.append(newTextarea);
+            newTextarea.val(localStorage.getItem(dataTime[i]));
 
 
             // all save button stuff
             var newBtn = $("<button>");
-            newBtn.addClass("selectSave");
+            newBtn.addClass("saveStyle");
             newBtn.attr("data-name", dataTime[i]);
-            newBtn.text(dataTime[i]);
+            newBtn.text("Save");
             newRowSavebtn.append(newBtn);
 
 
@@ -177,13 +159,9 @@
             // appends row to holder div
             $("#holder").append(newRow);
 
-
             store(newBtn, newTextarea);
 
-
         }
-
-
 
 
 
