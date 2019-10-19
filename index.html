@@ -39,7 +39,7 @@
 
 
     <!-- where page content will go -->
-    <div class="container">
+    <div id="holder" class="container">
 
         <div id="dateTimeDiv" class="row">
             <div class="col">
@@ -51,147 +51,8 @@
         </div>
 
 
-        <div class="row">
 
-            <!-- nine AM box -->
-            <div class="col-12 schBox">
-                <div class="row">
-                    <div class="col-2 timeBox">
-                        <h5 class="timeBoxText">9am</h5>
-                    </div>
-                    <div class="col-8">
-                        <textarea class="schTextBox" id="nineAm" type="text"></textarea>
-                    </div>
-                    <div class="col-2">
-                        <button id="saveBtn1" class="saveBtn" onclick="saveNine()">Save</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ten AM box -->
-            <div class="col-12 schBox">
-                <div class="row">
-                    <div class="col-2 timeBox">
-                        <h5 class="timeBoxText">10am</h5>
-                    </div>
-                    <div class="col-8">
-                        <textarea class="schTextBox" id="tenAm" type="text"></textarea>
-                    </div>
-                    <div class="col-2">
-                        <button id="saveBtn2" class="saveBtn" onclick="saveTen()">Save</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- eleven AM box -->
-            <div class="col-12 schBox">
-                <div class="row">
-                    <div class="col-2 timeBox">
-                        <h5 class="timeBoxText">11am</h5>
-                    </div>
-                    <div class="col-8">
-                        <textarea class="schTextBox" id="elevenAm" type="text"></textarea>
-                    </div>
-                    <div class="col-2">
-                        <button id="saveBtn3" class="saveBtn" onclick="saveEleven()">Save</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- twelve AM box -->
-            <div class="col-12 schBox">
-                <div class="row">
-                    <div class="col-2 timeBox">
-                        <h5 class="timeBoxText">12am</h5>
-                    </div>
-                    <div class="col-8">
-                        <textarea class="schTextBox" id="twelveAm" type="text"></textarea>
-                    </div>
-                    <div class="col-2">
-                        <button id="saveBtn4" class="saveBtn" onclick="saveTwelve()">Save</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- one PM box -->
-            <div class="col-12 schBox">
-                <div class="row">
-                    <div class="col-2 timeBox">
-                        <h5 class="timeBoxText">1pm</h5>
-                    </div>
-                    <div class="col-8">
-                        <textarea class="schTextBox" id="onePm" type="text"></textarea>
-                    </div>
-                    <div class="col-2">
-                        <button id="saveBtn5" class="saveBtn" onclick="saveOne()">Save</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- two PM box -->
-            <div class="col-12 schBox">
-                <div class="row">
-                    <div class="col-2 timeBox">
-                        <h5 class="timeBoxText">2pm</h5>
-                    </div>
-                    <div class="col-8">
-                        <textarea class="schTextBox" id="twoPm" type="text"></textarea>
-                    </div>
-                    <div class="col-2">
-                        <button id="saveBtn6" class="saveBtn" onclick="saveTwo()">Save</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- three PM box -->
-            <div class="col-12 schBox">
-                <div class="row">
-                    <div class="col-2 timeBox">
-                        <h5 class="timeBoxText">3pm</h5>
-                    </div>
-                    <div class="col-8">
-                        <textarea class="schTextBox" id="threePm" type="text"></textarea>
-                    </div>
-                    <div class="col-2">
-                        <button id="saveBtn7" class="saveBtn" onclick="saveThree()">Save</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- four PM box -->
-            <div class="col-12 schBox">
-                <div class="row">
-                    <div class="col-2 timeBox">
-                        <h5 class="timeBoxText">4pm</h5>
-                    </div>
-                    <div class="col-8">
-                        <textarea class="schTextBox" id="fourPm" type="text"></textarea>
-                    </div>
-                    <div class="col-2">
-                        <button id="saveBtn8" class="saveBtn" onclick="saveFour()">Save</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- five PM box -->
-            <div class="col-12 schBox">
-                <div class="row">
-                    <div class="col-2 timeBox">
-                        <h5 class="timeBoxText">5pm</h5>
-                    </div>
-                    <div class="col-8">
-                        <textarea class="schTextBox" id="fivePm" type="text"></textarea>
-                    </div>
-                    <div class="col-2">
-                        <button id="saveBtn9" class="saveBtn" onclick="saveFive()">Save</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
     </div>
-
-    <footer></footer>
 
 
 
@@ -229,61 +90,107 @@
 
 
 
-        document.getElementById("nineAm").value = localStorage.getItem("nineAm");
-        document.getElementById("tenAm").value = localStorage.getItem("tenAm");
-        document.getElementById("elevenAm").value = localStorage.getItem("elevenAm");
-        document.getElementById("twelveAm").value = localStorage.getItem("twelveAm");
-        document.getElementById("onePm").value = localStorage.getItem("onePm");
-        document.getElementById("twoPm").value = localStorage.getItem("twoPm");
-        document.getElementById("threePm").value = localStorage.getItem("threePm");
-        document.getElementById("fourPm").value = localStorage.getItem("fourPm");
-        document.getElementById("fivePm").value = localStorage.getItem("fivePm");
 
 
-        function saveNine() {
-            var nineAm = document.getElementById("nineAm").value;
-            localStorage.setItem("nineAm", nineAm);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var dataTime = ["9am", "10am", "11am", "12am", "1pm", "2pm", "3pm", "4pm", "5pm"];
+
+
+
+        function store(newBtn, newTextarea) {
+            (newBtn).click(function () {
+
+                console.log($(this).attr("data-name"))
+                localStorage.setItem($(this).attr("data-name"), $(newTextarea).val());
+
+                var getData = $(this).attr("data-name");
+                var setData = $(newTextarea).val();
+
+                console.log(localStorage.getItem(getData));
+
+                newTextarea.val(localStorage.getItem($(this).attr("data-name")));
+            });
         }
 
-        function saveTen() {
-            var tenAm = document.getElementById("tenAm").value;
-            localStorage.setItem("tenAm", tenAm);
+
+
+        for (var i = 0; i < dataTime.length; i++) {
+
+
+            // create row
+            var newRow = $("<div>");
+            newRow.addClass("row");
+
+            // time label div
+            var newRowTimelabel = $("<div>");
+            newRowTimelabel.addClass("col-2");
+
+            // textarea div
+            var newRowTextarea = $("<div>");
+            newRowTextarea.addClass("col-8");
+
+            // savebutton div
+            var newRowSavebtn = $("<div>");
+            newRowSavebtn.addClass("col-2");
+
+
+
+
+            // all textarea stuff
+            var newTextarea = $("<textarea>");
+            newTextarea.val(localStorage.getItem($(this).attr("data-name")));
+            newRowTextarea.append(newTextarea);
+
+
+            // all save button stuff
+            var newBtn = $("<button>");
+            newBtn.addClass("selectSave");
+            newBtn.attr("data-name", dataTime[i]);
+            newBtn.text(dataTime[i]);
+            newRowSavebtn.append(newBtn);
+
+
+            // appends everything to row
+            newRow.append(newRowTimelabel);
+            newRow.append(newRowTextarea);
+            newRow.append(newRowSavebtn);
+
+
+            // appends row to holder div
+            $("#holder").append(newRow);
+
+
+            store(newBtn, newTextarea);
+
+
         }
 
-        function saveEleven() {
-            var elevenAm = document.getElementById("elevenAm").value;
-            localStorage.setItem("elevenAm", elevenAm);
-        }
 
-        function saveTwelve() {
-            var twelveAm = document.getElementById("twelveAm").value;
-            localStorage.setItem("twelveAm", twelveAm);
-        }
 
-        function saveOne() {
-            var onePm = document.getElementById("onePm").value;
-            localStorage.setItem("onePm", onePm);
-        }
 
-        function saveTwo() {
-            var twoPm = document.getElementById("twoPm").value;
-            localStorage.setItem("twoPm", twoPm);
-        }
 
-        function saveThree() {
-            var threePm = document.getElementById("threePm").value;
-            localStorage.setItem("threePm", threePm);
-        }
 
-        function saveFour() {
-            var fourPm = document.getElementById("fourPm").value;
-            localStorage.setItem("fourPm", fourPm);
-        }
 
-        function saveFive() {
-            var fivePm = document.getElementById("fivePm").value;
-            localStorage.setItem("fivePm", fivePm);
-        }
+
+
     </script>
 </body>
 
