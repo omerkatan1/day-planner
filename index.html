@@ -98,6 +98,15 @@
 
         var dataTime = ["9am", "10am", "11am", "12am", "1pm", "2pm", "3pm", "4pm", "5pm"];
 
+        var present = moment().format('ha');
+        var past = dataTime.slice(0, dataTime.indexOf(present));
+        var future = dataTime.slice(dataTime.indexOf(present) + 1, dataTime.length);
+        console.log(past);
+        console.log(future);
+
+
+
+
 
         for (var i = 0; i < dataTime.length; i++) {
 
@@ -169,6 +178,16 @@
         }
 
 
+        for (var i = 0; i < past.length; i++) {
+            $("[data-time = " + past[i] + "]").css("background-color", "gray");
+        }
+        for (var i = 0; i < future.length; i++) {
+            $("[data-time = " + future[i] + "]").css("background-color", "green");
+        }
+
+
+        // current time
+        $("[data-time = " + present + " ]").css("background-color", "yellow");
 
         function store(newBtn, newTextarea) {
             (newBtn).click(function () {
