@@ -57,8 +57,6 @@
 
     </div>
 
-    <footer></footer>
-
 
 
     <!-- javascript stuff -->
@@ -76,19 +74,21 @@
 
         });
 
-// make a var to get time hour and then set the background color of each textarea of the right time
+        // make a var to get time hour and then set the background color of each textarea of the right time
         function setTime() {
             var getDate = moment().format('MMMM Do YYYY, h:mm:ss a');
-            var newDate = getDate.substring(0, getDate.indexOf(','));
-            var newTime = getDate.substring(newDate.length + 2, getDate.length);
-            var newHour = getDate.substring(newDate.length + 2, getDate.indexOf(':'));
-            var newHourInt = parseInt(newHour);
+            var amPm = moment().format('a');
+            var newDate = moment().format('MMM Do YYYY');
+            var newTime = moment().format('h:mm') + " " + amPm;
+
 
             $("#dateHolder").empty();
             $("#timeHolder").empty();
             $("#dateHolder").append(newDate);
             $("#timeHolder").append(newTime);
+
         }
+
 
         setTime();
         setInterval(function () {
@@ -96,32 +96,16 @@
         }, 1000)
 
 
-
-
-
         var dataTime = ["9am", "10am", "11am", "12am", "1pm", "2pm", "3pm", "4pm", "5pm"];
-
-
-
-        function store(newBtn, newTextarea) {
-            (newBtn).click(function () {
-
-                // this is the data-name of the current button that is being clicked
-                var getData = $(this).attr("data-name");
-                // this is the text inside the text area
-                var setData = $(newTextarea).val();
-
-                // save textarea value to localStorge to button clicked
-                localStorage.setItem(getData, setData);
-            });
-        }
 
 
         for (var i = 0; i < dataTime.length; i++) {
 
 
+
             // create row
             var newRow = $("<div>");
+
             newRow.addClass("row");
 
             // time label div
@@ -132,6 +116,8 @@
             // textarea div
             var newRowTextarea = $("<div>");
             newRowTextarea.addClass("col-8");
+
+
 
             // savebutton div
             var newRowSavebtn = $("<div>");
@@ -148,7 +134,9 @@
             // all textarea stuff
             var newTextarea = $("<textarea>");
             newRowTextarea.append(newTextarea);
+            newTextarea.attr("data-time", dataTime[i]);
             newTextarea.val(localStorage.getItem(dataTime[i]));
+
 
 
             // all save button stuff
@@ -157,6 +145,9 @@
             newBtn.attr("data-name", dataTime[i]);
             newBtn.text("Save");
             newRowSavebtn.append(newBtn);
+
+
+
 
 
             // appends everything to row
@@ -168,15 +159,30 @@
             // appends row to holder div
             $("#holder").append(newRow);
 
+
+
+
+
+
             store(newBtn, newTextarea);
 
         }
 
 
 
+        function store(newBtn, newTextarea) {
+            (newBtn).click(function () {
 
+                // this is the data-name of the current button that is being clicked
+                var getData = $(this).attr("data-name");
+                console.log(getData);
+                // this is the text inside the text area
+                var setData = $(newTextarea).val();
 
-
+                // save textarea value to localStorge to button clicked
+                localStorage.setItem(getData, setData);
+            });
+        }
 
     </script>
 </body>

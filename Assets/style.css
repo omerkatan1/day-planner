@@ -61,6 +61,17 @@ textarea {
     border-left: 4px solid rgb(17, 133, 237);
 }
 
+.textareaPast {
+    background-color: gray;
+}
+.textareaPresent {
+    background-color: blue;
+}
+.textareaFuture {
+    background-color: green;
+}
+
+
 textarea:focus {
     outline: none;
 }
