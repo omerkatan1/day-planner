@@ -63,12 +63,15 @@ textarea {
 
 .textareaPast {
     background-color: gray;
+    color: whitesmoke;
 }
 .textareaPresent {
-    background-color: blue;
+    color: black;
+    background-color: rgb(157, 158, 98);
 }
 .textareaFuture {
-    background-color: green;
+    color: black;
+    background-color: rgb(142, 187, 142);
 }
 
 

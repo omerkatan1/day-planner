@@ -178,16 +178,16 @@
         }
 
 
+        // past time
         for (var i = 0; i < past.length; i++) {
-            $("[data-time = " + past[i] + "]").css("background-color", "gray");
+            $("[data-time = " + past[i] + "]").addClass("textareaPast");
         }
+        // future time
         for (var i = 0; i < future.length; i++) {
-            $("[data-time = " + future[i] + "]").css("background-color", "green");
+            $("[data-time = " + future[i] + "]").addClass("textareaFuture");
         }
-
-
         // current time
-        $("[data-time = " + present + " ]").css("background-color", "yellow");
+        $("[data-time = " + present + " ]").addClass("textareaPresent");
 
         function store(newBtn, newTextarea) {
             (newBtn).click(function () {
