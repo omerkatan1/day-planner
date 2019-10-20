@@ -76,10 +76,13 @@
 
         });
 
+// make a var to get time hour and then set the background color of each textarea of the right time
         function setTime() {
             var getDate = moment().format('MMMM Do YYYY, h:mm:ss a');
             var newDate = getDate.substring(0, getDate.indexOf(','));
             var newTime = getDate.substring(newDate.length + 2, getDate.length);
+            var newHour = getDate.substring(newDate.length + 2, getDate.indexOf(':'));
+            var newHourInt = parseInt(newHour);
 
             $("#dateHolder").empty();
             $("#timeHolder").empty();
